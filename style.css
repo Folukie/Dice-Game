@@ -21,7 +21,23 @@ body {
   align-items: center;
   justify-content: center;
 }
-
+.final-score{
+  position: absolute;
+  left: 46%;
+  transform: translateX(-50px);
+  top: 520px;
+  color: #555;
+  font-size: 18px;
+  font-family: 'Lato';
+  text-align: center;
+  padding: 10px;
+  width:180px;
+  text-transform: uppercase;
+  border: 1px solid #be36c7ab;
+}
+.final-score:focus{
+  outline: none;
+}
 /* LAYOUT */
 main {
   position: relative;
@@ -68,7 +84,15 @@ main {
 }
 .player--active .name {
   font-weight: 700;
+  
 }
+.player--active .name::after {
+  content: "";
+  background-color: red;
+  padding: 1px 28px;
+  border-radius: 50%;
+}
+
 .player--active .score {
   font-weight: 400;
 }
@@ -151,7 +175,15 @@ main {
 .dice {
   position: absolute;
   left: 50%;
-  top: 16.5rem;
+  top: 13rem;
+  transform: translateX(-50%);
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+.dice2 {
+  position: absolute;
+  left: 50%;
+  top: 25rem;
   transform: translateX(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
